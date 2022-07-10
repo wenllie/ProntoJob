@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name"></string>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Open Navigation Drawer</string>
+
+    <string name="queryHint">Enter keyword</string>
+</resources>
