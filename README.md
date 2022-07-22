@@ -11,9 +11,7 @@ A mobile application for an online employment marketplace that allows job seeker
 - Efficient
 - Data Privacy
 <br><br>
-## System Requirements
-
-Android Studio Requirements
+## System Requirements (Good for Android Studio)
 
 Computer Specifications:
 - 64-bit Microsoft® Windows® 8/10/11
@@ -22,6 +20,6 @@ Computer Specifications:
 - 8 GB of available disk space minimum (IDE + Android SDK + Android Emulator)
 - 1280 x 800 minimum screen resolution
 
-Firebase Requirements
+## Firebase Requirements
 
 
