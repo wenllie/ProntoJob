@@ -80,9 +80,14 @@ public class JobseekerLogin extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        Toast.makeText(JobseekerLogin.this, "User Logged in Successfully", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(JobseekerLogin.this, JobseekerHome.class));
-                        finish();
+                        if (mAuth.getCurrentUser().isEmailVerified()){
+                            Toast.makeText(JobseekerLogin.this, "User Logged in Successfully", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(JobseekerLogin.this, JobseekerHome.class));
+                            finish();
+                        } else {
+                            Toast.makeText(JobseekerLogin.this, "Please verify your email address!", Toast.LENGTH_SHORT).show();
+                            FirebaseAuth.getInstance().signOut();
+                        }
                     } else {
                         Toast.makeText(JobseekerLogin.this, "Log in error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }

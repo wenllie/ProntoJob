@@ -29,7 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class JobseekerRegister extends AppCompatActivity implements View.OnClickListener{
 
     //declare
-    private EditText firstname, lastname, phonenumber, jsEmail, jsPassword, confirmPass;
+    private EditText firstname, lastname, jsEmail, jsPassword, confirmPass;
     private Button register;
     private TextView login;
     private ProgressBar progressBar;
@@ -46,7 +46,6 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
         //initialize
         firstname = (EditText) findViewById(R.id.jsregFirstname);
         lastname = (EditText) findViewById(R.id.jsregLastname);
-        phonenumber = (EditText) findViewById(R.id.jsregPhonenumber);
         jsEmail = (EditText) findViewById(R.id.jsRegEmail);
         jsPassword = (EditText) findViewById(R.id.jsRegPass);
         confirmPass = (EditText) findViewById(R.id.jsRegConfirmPass);
@@ -82,7 +81,6 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
         //extract data from edit text
         String firstName = firstname.getText().toString();
         String lastName = lastname.getText().toString();
-        String phoneNum = phonenumber.getText().toString();
         String Email = jsEmail.getText().toString();
         String Pass = jsPassword.getText().toString();
         String confPass = confirmPass.getText().toString();
@@ -94,17 +92,12 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
             return;
         }
         if (lastName.isEmpty()) {
-            lastname.setError("First name is required!");
+            lastname.setError("Last name is required!");
             lastname.requestFocus();
             return;
         }
-        if (phoneNum.isEmpty()) {
-            phonenumber.setError("First name is required!");
-            phonenumber.requestFocus();
-            return;
-        }
         if (Email.isEmpty()) {
-            jsEmail.setError("First name is required!");
+            jsEmail.setError("Email is required!");
             jsEmail.requestFocus();
             return;
         }
@@ -114,18 +107,20 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
             return;
         }
         if (Pass.isEmpty()) {
-            jsPassword.setError("First name is required!");
+            jsPassword.setError("Password is required!");
             jsPassword.requestFocus();
             return;
         }
         if (confPass.isEmpty()) {
-            confirmPass.setError("First name is required!");
+            confirmPass.setError("Confirm Password is required!");
             confirmPass.requestFocus();
             return;
         }
         if (!confPass.equals(Pass)) {         //verify that password and confirm password is the same
             confirmPass.setError("Password do not match!");
             confirmPass.requestFocus();
+            confirmPass.setText("");
+            jsPassword.setText("");
             return;
         }
         if (Pass.equals(confPass)){
@@ -139,7 +134,7 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
 
 
                         //store user data into realtime database
-                        UserDetails userDetails = new UserDetails(firstName, lastName, phoneNum);
+                        UserDetails userDetails = new UserDetails(firstName, lastName);
 
                         //extracting user reference from database for "Registered Job Seekers"
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Registered Job Seekers");
@@ -150,16 +145,28 @@ public class JobseekerRegister extends AppCompatActivity implements View.OnClick
 
                                 if (task.isSuccessful()){
                                     //send email verification
-                                    user.sendEmailVerification();
+                                    user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(JobseekerRegister.this,"Account Registered Successfully! Please verify your email.", Toast.LENGTH_LONG).show();
 
-                                    Toast.makeText(JobseekerRegister.this,"Account Registered Successfully! Please verify your email.", Toast.LENGTH_LONG).show();
+                                                // to get the user ID for verifying user
+                                                JobSeekerVerify.userID = user.getUid();
 
-                                    //login user after successful registration
-                                    Intent login = new Intent(JobseekerRegister.this, JobseekerHome.class);
-                                    //prevent user from returning back to the register page on pressing back button after registration
-                                    login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    startActivity(login);
-                                    finish();
+                                                //login user after successful registration
+                                                Intent login = new Intent(JobseekerRegister.this, JobSeekerVerify.class);
+                                                //prevent user from returning back to the register page on pressing back button after registration
+                                                login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                                startActivity(login);
+                                                finish();
+                                            } else {
+                                                Toast.makeText(JobseekerRegister.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
+
+
                                 } else {
                                     Toast.makeText(JobseekerRegister.this,"Registration failed! Please try again.", Toast.LENGTH_LONG).show();
                                 }

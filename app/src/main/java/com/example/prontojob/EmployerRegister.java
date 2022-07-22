@@ -29,7 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class EmployerRegister extends AppCompatActivity implements View.OnClickListener{
 
     //declare
-    private EditText efirstname, elastname, ephonenumber, eEmail, ePassword, eConfirmPass;
+    private EditText efirstname, elastname, eEmail, ePassword, eConfirmPass;
     private Button eregister;
     private TextView elogin;
     private ProgressBar eprogressBar;
@@ -46,7 +46,6 @@ public class EmployerRegister extends AppCompatActivity implements View.OnClickL
         //initialize
         efirstname = (EditText) findViewById(R.id.eregFirstname);
         elastname = (EditText) findViewById(R.id.eregLastname);
-        ephonenumber = (EditText) findViewById(R.id.eregPhonenumber);
         eEmail = (EditText) findViewById(R.id.eRegEmail);
         ePassword = (EditText) findViewById(R.id.eRegPass);
         eConfirmPass = (EditText) findViewById(R.id.eRegConfirmPass);
@@ -83,7 +82,6 @@ public class EmployerRegister extends AppCompatActivity implements View.OnClickL
         //extract data from edit text
         String firstName = efirstname.getText().toString();
         String lastName = elastname.getText().toString();
-        String phoneNum = ephonenumber.getText().toString();
         String Email = eEmail.getText().toString();
         String Pass = ePassword.getText().toString();
         String confPass = eConfirmPass.getText().toString();
@@ -95,32 +93,27 @@ public class EmployerRegister extends AppCompatActivity implements View.OnClickL
             return;
         }
         if (lastName.isEmpty()) {
-            elastname.setError("First name is required!");
+            elastname.setError("Last name is required!");
             elastname.requestFocus();
             return;
         }
-        if (phoneNum.isEmpty()) {
-            ephonenumber.setError("First name is required!");
-            ephonenumber.requestFocus();
-            return;
-        }
         if (Email.isEmpty()) {
-            eEmail.setError("First name is required!");
+            eEmail.setError("Email is required!");
             eEmail.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {         //verify that email address is a valid email
-            eEmail.setError("Please enter a valid jsEmail address.");
+            eEmail.setError("Please enter a valid email address.");
             eEmail.requestFocus();
             return;
         }
         if (Pass.isEmpty()) {
-            ePassword.setError("First name is required!");
+            ePassword.setError("Password is required!");
             ePassword.requestFocus();
             return;
         }
         if (confPass.isEmpty()) {
-            eConfirmPass.setError("First name is required!");
+            eConfirmPass.setError("Confirm password is required!");
             eConfirmPass.requestFocus();
             return;
         }
@@ -137,10 +130,8 @@ public class EmployerRegister extends AppCompatActivity implements View.OnClickL
                     if (task.isSuccessful()) {
                         FirebaseUser user =  mAuth.getCurrentUser();
 
-
-
                         //store user data into realtime database
-                        UserDetails userDetails = new UserDetails(firstName, lastName, phoneNum);
+                        UserDetails userDetails = new UserDetails(firstName, lastName);
 
                         //extracting user reference from database for "Registered Employers"
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Registered Employers");
@@ -155,8 +146,11 @@ public class EmployerRegister extends AppCompatActivity implements View.OnClickL
 
                                     Toast.makeText(EmployerRegister.this,"Account Registered Successfully! Please verify your email.", Toast.LENGTH_LONG).show();
 
+                                    // to get the user ID for verifying user
+                                    EmployerVerify.eUserID = user.getUid();
+
                                     //login user after successful registration
-                                    Intent login = new Intent(EmployerRegister.this, EmployerHome.class);
+                                    Intent login = new Intent(EmployerRegister.this, EmployerVerify.class);
                                     //prevent user from returning back to the register page on pressing back button after registration
                                     login.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(login);

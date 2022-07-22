@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--        ID Type-->
+    <string-array name="id_type">
+        <item>Social Security System (SSS) Card</item>
+        <item>Government Service Insurance System (GSIS) Card</item>
+        <item>Unified Multi-Purpose Identification (UMID) Card</item>
+        <item>Land Transportation Office (LTO) Driver\'s License</item>
+        <item>Professional Regulatory Commission (PRC) ID</item>
+        <item>Philippine Identification (PhilID)</item>
+        <item>Overseas Workers Welfare Administration (OWWA) E-Card</item>
+        <item>Voter\'s ID</item>
+        <item>Philippine Postal ID</item>
+        <item>Passport</item>
+    </string-array>
+
+    <!--    Experience-->
+    <string-array name="experience">
+        <item>0-3 months</item>
+        <item>6-11 months</item>
+        <item>1 year</item>
+        <item>2 years above</item>
+    </string-array>
+</resources>

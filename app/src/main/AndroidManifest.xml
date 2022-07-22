@@ -5,6 +5,25 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,13 +35,16 @@
         android:theme="@style/Theme.ProntoJob"
         tools:targetApi="31">
         <activity
+            android:name=".EmployerVerify"
+            android:exported="false" />
+        <activity
+            android:name=".JobSeekerVerify"
+            android:exported="false" />
+        <activity
             android:name=".JobseekerHome"
             android:exported="false" />
         <activity
             android:name=".EmployerRegister"
-            android:exported="false" />
-        <activity
-            android:name=".JobseekerRegister"
             android:exported="false" />
         <activity
             android:name=".EmployerHome"
@@ -32,6 +54,9 @@
             android:exported="false" />
         <activity
             android:name=".JobseekerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".JobseekerRegister"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

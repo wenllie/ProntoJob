@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/e_mobile_navigation"
+    app:startDestination="@id/nav_ehome">
+
+    <fragment
+        android:id="@+id/nav_ehome"
+        android:name="com.example.prontojob.uie.ehome.EHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_e_home" />
+    <fragment
+        android:id="@+id/nav_ehelpcenter"
+        android:name="com.example.prontojob.uie.ehelp.EHelpCenterFragment"
+        android:label="@string/menu_helpcenter"
+        tools:layout="@layout/fragment_e_help_center" />
+    <fragment
+        android:id="@+id/nav_eprofile"
+        android:name="com.example.prontojob.uie.eprofile.EProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_e_profile" />
+    <fragment
+        android:id="@+id/nav_esettings"
+        android:name="com.example.prontojob.uie.esettings.ESettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_e_settings" />
+    <fragment
+        android:id="@+id/nav_epostedjobs"
+        android:name="com.example.prontojob.uie.postjob.EPostedJobFragment"
+        android:label="@string/menu_postedjobs"
+        tools:layout="@layout/fragment_e_posted_job" />
+</navigation>
