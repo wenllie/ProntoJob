@@ -3,14 +3,25 @@
 A mobile application for an online employment marketplace that allows job seekers to sign up and see job vacancies that match their knowledge and skill set.
 <br><br>
 
-## Features
+## Benefits
 
 - Convenience and Productivity
 - New Opportunities
 - Hassle Free Process
 - Efficient
 - Data Privacy
-<br><br>
+
+## Features
+
+Job Seekers:
+- Find a job vacancy
+- Widen professional experience
+- Apply to authentic employers
+
+Employers:
+- Post open positions
+- Faster hiring process
+
 ## System Requirements (Good for Android Studio)
 
 Computer Specifications:
