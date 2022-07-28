@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbarSize="5sp"
     tools:context=".uie.ehelp.EHelpCenterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:padding="10dp">
 
-</FrameLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How can we Help?"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eAppliedJobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Job Applications"
+            android:textColor="@color/black"
+            app:iconTint="#595959"
+            android:background="@color/material_on_background_disabled"
+            app:icon="@drawable/ic_baseline_work_24"
+            app:iconGravity="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#A8A8A8"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eMyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="My Account"
+            android:textColor="@color/black"
+            app:iconTint="#595959"
+            android:background="@color/material_on_background_disabled"
+            app:icon="@drawable/ic_baseline_account_circle_24"
+            app:iconGravity="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#A8A8A8"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eFAQs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="FAQ"
+            android:textColor="@color/black"
+            app:iconTint="#595959"
+            android:background="@color/material_on_background_disabled"
+            app:icon="@drawable/ic_baseline_help_outline_24"
+            app:iconGravity="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#A8A8A8"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/eFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Feedback"
+            android:textColor="@color/black"
+            app:iconTint="#595959"
+            android:background="@color/material_on_background_disabled"
+            app:icon="@drawable/ic_baseline_feedback_24"
+            app:iconGravity="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:gravity="center_vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#A8A8A8"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

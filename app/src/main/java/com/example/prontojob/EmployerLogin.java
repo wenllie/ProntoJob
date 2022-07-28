@@ -62,6 +62,10 @@ public class EmployerLogin extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(EmployerLogin.this, EmployerRegister.class));
                 finish();
                 break;
+            case R.id.eForgotPass:
+                startActivity(new Intent(EmployerLogin.this, ForgotPassword.class));
+                finish();
+                break;
         }
     }
 

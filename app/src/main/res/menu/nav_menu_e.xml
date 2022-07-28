@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/menu_profile" />
         <item
+            android:id="@+id/nav_eanalytics"
+            android:icon="@drawable/ic_baseline_analytics_24"
+            android:title="@string/menu_analytics" />
+        <item
             android:id="@+id/nav_esettings"
             android:icon="@drawable/ic_baseline_settings_24"
             android:title="@string/menu_settings" />

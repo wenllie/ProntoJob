@@ -49,6 +49,8 @@ public class JobseekerLogin extends AppCompatActivity implements View.OnClickLis
 
         //forgot password
         forgotPass.setOnClickListener(this);
+
+        forgotPass.setOnClickListener(this);
     }
 
     //function for routing to jobseeker and/or jobseeker homepage
@@ -60,6 +62,10 @@ public class JobseekerLogin extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.jsRegister:
                 startActivity(new Intent(JobseekerLogin.this, JobseekerRegister.class));
+                finish();
+                break;
+            case R.id.jsForgotPass:
+                startActivity(new Intent(JobseekerLogin.this, ForgotPassword.class));
                 finish();
                 break;
         }

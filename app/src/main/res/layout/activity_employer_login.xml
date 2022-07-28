@@ -65,7 +65,6 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"/>
 
-
         </com.google.android.material.textfield.TextInputLayout>
 
 
