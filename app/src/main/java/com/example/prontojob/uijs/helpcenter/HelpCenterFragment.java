@@ -11,11 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.prontojob.R;
 import com.example.prontojob.databinding.FragmentHelpCenterBinding;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
 public class HelpCenterFragment extends Fragment implements View.OnClickListener {
 
-    private MaterialTextView jobApplications, forgotPass, jsFaqs, jsFB;
+    private MaterialButton jobApplications, forgotPass, jsFaqs, jsFB;
 
     private FragmentHelpCenterBinding binding;
 
@@ -25,10 +26,10 @@ public class HelpCenterFragment extends Fragment implements View.OnClickListener
         binding = FragmentHelpCenterBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        jobApplications = (MaterialTextView) root.findViewById(R.id.jsAppliedJobs);
-        forgotPass = (MaterialTextView) root.findViewById(R.id.jsHCPassword);
-        jsFaqs = (MaterialTextView) root.findViewById(R.id.jsFAQs);
-        jsFB = (MaterialTextView) root.findViewById(R.id.jsFeedback);
+        jobApplications = (MaterialButton) root.findViewById(R.id.jsAppliedJobs);
+        forgotPass = (MaterialButton) root.findViewById(R.id.jsHCPassword);
+        jsFaqs = (MaterialButton) root.findViewById(R.id.jsFAQs);
+        jsFB = (MaterialButton) root.findViewById(R.id.jsFeedback);
 
         jobApplications.setOnClickListener(this);
         return root;

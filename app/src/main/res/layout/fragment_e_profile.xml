@@ -24,7 +24,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/jstvFirstName"
+                android:id="@+id/etvFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -35,7 +35,7 @@
                 android:textColor="@color/black" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/jstvLastName"
+                android:id="@+id/etvLastName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -44,62 +44,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textColor="@color/black" />
         </LinearLayout>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sign in Information"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"/>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:enabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/jsVEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="12sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/main">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/jsVPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="12sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="#A8A8A8"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -123,14 +67,13 @@
                 android:textSize="12sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/jsDbBirthday"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/jsDateFormat"
+                    android:id="@+id/jsDbBirthday"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="MM/DD/YYYY"
@@ -149,6 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Age"
+                    android:enabled="false"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
@@ -189,82 +133,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Certificate of Employment"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="14sp" />
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/eCertEmp"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="start"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/ic_baseline_picture_as_pdf_24" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/etvCertFile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:text="ID Type"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="14sp" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/eIDType"
+            <TextView
+                android:id="@+id/eDBIDType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:minHeight="48dp" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="ID Picture"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="14sp" />
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/eUploadID"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/black_round_corners"
-                    android:text="Upload ID"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textColor="@color/white" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/etvIDFile"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/jsSave"
+            android:id="@+id/eSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

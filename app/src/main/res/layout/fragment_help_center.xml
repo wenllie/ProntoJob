@@ -33,7 +33,6 @@
             android:background="@color/material_on_background_disabled"
             app:icon="@drawable/ic_baseline_work_24"
             app:iconGravity="textStart"
-
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
             android:gravity="center_vertical"/>
 

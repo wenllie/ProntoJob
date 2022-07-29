@@ -27,7 +27,127 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="#a8a8a8"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_blue">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/jaJobTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobminSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobmaxSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:id="@+id/jaJobDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="13sp"
+                        android:minHeight="48dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Applicants:"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/appliedFirstname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/appliedLastname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:textColor="@color/black"
+                            android:textAllCaps="false"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

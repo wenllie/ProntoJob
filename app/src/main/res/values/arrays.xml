@@ -21,4 +21,27 @@
         <item>1 year</item>
         <item>2 years above</item>
     </string-array>
+
+
+<!--    Job Categories-->
+    <string-array name="jobCategories">
+        <item>Agriculture, Food, and Natural Resources</item>
+        <item>Architecture and Construction</item>
+        <item>Arts, Audio/Video Technology, and Communication</item>
+        <item>Business and Finance</item>
+        <item>Education and Training</item>
+        <item>Government and Public Administration</item>
+        <item>Health Science</item>
+        <item>Information Technology</item>
+        <item>Law, Public Safety, Corrections, and Security</item>
+        <item>Marketing</item>
+        <item>Science, Technology, Engineering, and Math</item>
+    </string-array>
+
+<!--    Job Type-->
+    <string-array name="jobType">
+        <item>Full Time</item>
+        <item>Part Time</item>
+        <item>Intern</item>
+    </string-array>
 </resources>

@@ -407,7 +407,7 @@ public class JobSeekerVerify extends AppCompatActivity implements View.OnClickLi
                     reference.child(userID).child("Information").child("Experience").setValue(exp);
                     reference.child(userID).child("Information").child("ID Type").setValue(idTy);
 
-                    startActivity(new Intent(JobSeekerVerify.this, JobseekerHome.class));
+                    startActivity(new Intent(JobSeekerVerify.this, JobseekerLogin.class));
                     finish();
                 }
             }

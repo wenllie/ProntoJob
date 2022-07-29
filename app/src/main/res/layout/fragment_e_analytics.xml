@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarSize="5sp"
-    tools:context=".eAnalyticsFragment">
+    tools:context=".uie.eanalytics.eAnalyticsFragment">
 
     <!--This is where the analytics should be coded [total number of job seekers,
                     total number of employers, number of posted jobs, and number of hired applicants]-->
@@ -67,7 +67,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                        android:textSize="13sp"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/main"
                         android:textStyle="bold"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -103,7 +105,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                        android:textSize="13sp"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/main"
                         android:textStyle="bold"/>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/black_round_corners.xml" value="0.271" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.271" />
+        <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/light_blue.xml" value="0.208" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/no_bg.xml" value="0.271" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/prof_top.xml" value="0.271" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/rounded_corners.xml" value="0.2985" />
@@ -13,7 +14,7 @@
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/switch_button.xml" value="0.2985" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/upper_left_round.xml" value="0.2985" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/drawable/yes_bg.xml" value="0.271" />
-        <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/layout/activity_employer_home.xml" value="0.358695652173913" />
+        <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/layout/activity_employer_home.xml" value="0.1" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/layout/activity_employer_login.xml" value="0.3484375" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/layout/activity_employer_register.xml" value="0.358695652173913" />
         <entry key="..\:/SCHOOL/AndroidStudioCreations/ProntoJob/app/src/main/res/layout/activity_employer_verify.xml" value="0.2975630611372381" />

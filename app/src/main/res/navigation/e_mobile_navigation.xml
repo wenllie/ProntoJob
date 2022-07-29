@@ -32,7 +32,7 @@
         tools:layout="@layout/fragment_e_posted_job" />
     <fragment
         android:id="@+id/nav_eanalytics"
-        android:name="com.example.prontojob.eAnalyticsFragment"
+        android:name="com.example.prontojob.uie.eanalytics.eAnalyticsFragment"
         android:label="@string/menu_analytics"
         tools:layout="@layout/fragment_e_analytics" />
 </navigation>

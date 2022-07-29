@@ -10,16 +10,20 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.prontojob.databinding.ActivityEmployerHomeBinding;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class EmployerHome extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityEmployerHomeBinding binding;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +34,14 @@ public class EmployerHome extends AppCompatActivity {
 
         setSupportActionBar(binding.eAppBarMain.etoolbar);
 
+        mAuth = FirebaseAuth.getInstance();
+
         DrawerLayout drawer = binding.eDrawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_ehome, R.id.nav_epostedjobs, R.id.nav_eprofile, R.id.nav_esettings, R.id.nav_ehelpcenter)
+                R.id.nav_ehome, R.id.nav_epostedjobs, R.id.nav_eprofile, R.id.nav_eanalytics, R.id.nav_esettings, R.id.nav_ehelpcenter)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.e_nav_host_fragment_content_main);
@@ -48,6 +54,22 @@ public class EmployerHome extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_e, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_elogout:
+                mAuth.signOut();
+                Intent intent = new Intent(binding.getRoot().getContext(), JobseekerLogin.class);
+                startActivity(intent);
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
     @Override
