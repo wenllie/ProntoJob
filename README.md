@@ -30,7 +30,3 @@ Computer Specifications:
 - 8 GB RAM or more
 - 8 GB of available disk space minimum (IDE + Android SDK + Android Emulator)
 - 1280 x 800 minimum screen resolution
-
-## Firebase Requirements
-
-
